@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EtudiantRepository extends CrudRepository<Etudiant, Integer> {
+    Iterable<Etudiant> findByClasseIsNull();
 }

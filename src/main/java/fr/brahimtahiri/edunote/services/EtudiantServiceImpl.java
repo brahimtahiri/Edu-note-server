@@ -45,4 +45,9 @@ public class EtudiantServiceImpl implements EtudiantService {
             throw new RessourceNotFoundException("L'étudiant n°" + id + " n'existe pas !");
         }
     }
+
+    @Override
+    public List<Etudiant> getEtudiantWithoutClasse() {
+        return (List<Etudiant>) this.etudiantRepository.findByClasseIsNull();
+    }
 }

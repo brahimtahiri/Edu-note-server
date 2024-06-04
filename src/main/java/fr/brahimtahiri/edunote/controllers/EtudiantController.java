@@ -40,4 +40,9 @@ public class EtudiantController {
         this.etudiantService.deleteEtudiantById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+    @GetMapping(path = "/withoutClasse")
+    public ResponseEntity<List<Etudiant>> getWithoutClasse() {
+        return new ResponseEntity<>(this.etudiantService.getEtudiantWithoutClasse(), HttpStatus.OK);
+    }
 }

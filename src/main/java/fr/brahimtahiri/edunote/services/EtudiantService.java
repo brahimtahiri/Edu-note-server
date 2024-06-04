@@ -14,4 +14,6 @@ public interface EtudiantService {
     Etudiant updateEtudiant(Etudiant etudiant);
 
     void deleteEtudiantById(int id);
+
+    List<Etudiant> getEtudiantWithoutClasse();
 }
